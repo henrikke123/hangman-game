@@ -237,3 +237,24 @@ body {
         margin-top: 5px;
     }
 }
+
+.site-header {
+    width: 100%;
+    padding: 20px 10px;
+    padding-top: 50px;
+    background: #4e0460; /* Matching the overall theme */
+    color: #fff;
+    text-align: center; /* Center the title for all screen sizes */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+ 
+.site-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #fff; /* White color for the text */
+    text-transform: uppercase; /* Styling to match your Hangman title in the game area */
+}
