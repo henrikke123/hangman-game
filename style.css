@@ -13,8 +13,9 @@ body {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background: #e281b5;
+    background: #4e0460;
 }
+
 .container {
     display: flex;
     width: 850px;
@@ -85,7 +86,7 @@ body {
     font-weight: 600;
     border-radius: 4px;
     text-transform: uppercase;
-    background: #78bfe8;
+    background: #5E63BA;
 }
 .keyboard button {
     padding: 7px;
@@ -96,7 +97,7 @@ body {
     opacity: 0.6;
 }
 :where(.game-modal, .keyboard) button:hover {
-    background: #8286c9;
+    background: #4e0460;
 }
 .game-modal {
     position: fixed;
@@ -184,5 +185,55 @@ body {
     }
     .game-modal button {
         padding: 10px 18px;
+    }
+}
+
+.site-footer {
+    width: 100%;
+    padding: 20px 10px;
+    background: #f0e6f6;
+    color: #3e0460;
+    text-align: center;
+    border-top: 3px solid #4e0460;
+    box-shadow: 0 -5px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+ 
+.footer-content p, .footer-content a {
+    color: #3e0460;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+ 
+.footer-content a {
+    text-decoration: none;
+    color: #5E63BA;
+}
+ 
+.footer-content a:hover {
+    color: #8286c9;
+}
+ 
+.sources ul {
+    list-style: none;
+    padding: 0;
+}
+ 
+.sources li {
+    display: inline;
+    margin-right: 10px;
+}
+ 
+@media (max-width: 782px) {
+    .footer-content {
+        font-size: 0.9rem;
+    }
+ 
+    .sources li {
+        display: block;
+        margin-right: 0;
+        margin-top: 5px;
     }
 }
