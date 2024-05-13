@@ -1,55 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hangman Spill | H og M Ny</title>
+    <title>Hangman Spill | H og M </title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts/ordliste.js" defer></script>
     <script src="scripts/script.js" defer></script>
 </head>
+
 <body>
-    
-      <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
-        import { getStorage, ref, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-storage.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
       
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyCTxAncTWwkIaZVvJe7n-ljBOJg5Uu51sw",
-          authDomain: "hangman-59335.firebaseapp.com",
-          projectId: "hangman-59335",
-          storageBucket: "hangman-59335.appspot.com",
-          messagingSenderId: "951359902193",
-          appId: "1:951359902193:web:e5ba4a36f3ccef9a9d7450",
-          measurementId: "G-83F6NQ3B48"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-        const storage = getStorage(app);
-
-        const pathReference = ref(storage, 'ordogforklaring.json');
-
-          // Fetch the URL and then fetch the file using the URL
-        getDownloadURL(pathReference)
-            .then((url) => {
-            fetch(url)
-                .then(response => console.log(response.json()))
-                .catch(error => console.error('Error fetching JSON:', error));
-            })
-            .catch(error => {
-            console.error('Error fetching URL:', error);
-            });
-
-        console.log(app)
-      </script>
     <div class="game-modal">
         <div class="content">
             <img src="#" alt="gif">
@@ -75,15 +36,12 @@
     </div>
     <footer class="site-footer">
         <div class="footer-content">
-            <p>Made by: Henrikke Rønneberg-Østrem and Margrethe Flornes Bryng</p>
+            <p>Laget av Henrikke Rønneberg-Østrem and Margrethe Flornes Bryng</p>
             <div class="sources">
-                <p>Sources:</p>
+                <p>Kilde:</p>
                 <ul>
                     <li>
-                        <a href="https://www.codingnepalweb.com/build-hangman-game-html-javascript/">Hangmang game inspiration</a>
-                    </li>
-                    <li>
-                        <a href="https://firebase.google.com/docs/web/alt-setup">Firebase storage</a>
+                        <a href="https://www.codingnepalweb.com/build-hangman-game-html-javascript/">Hangman game inspirasjon</a>
                     </li>
                 </ul>
             </div>

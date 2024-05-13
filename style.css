@@ -1,12 +1,14 @@
 /* Importerer Google font - Open Sans */
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+/* styler alle HTML-elementene på siden */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Open Sans", sans-serif;
 }
-
+/* styler det som er inni body-elementet. Blant annet bakgrunnsfarge.  */
 body {
     display: flex;
     padding: 0 10px;
@@ -15,7 +17,7 @@ body {
     min-height: 100vh;
     background: #4e0460;
 }
-
+/* styler den hvite boksen  */
 .container {
     display: flex;
     width: 850px;
@@ -27,16 +29,21 @@ body {
     justify-content: space-between;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
+
+/* styler det bildet som viser hangman figuren */
 .hangman-box img {
     user-select: none;
     max-width: 270px;
 }
+/* styler overskriften i hangmanboksen  */
 .hangman-box h1 {
     font-size: 1.45rem;
     text-align: center;
     margin-top: 20px;
     text-transform: uppercase;
 }
+
+/* styler ord-displayet  */
 .game-box .word-display {
     gap: 10px;
     list-style: none;
@@ -45,6 +52,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+/* styler bokstavene */
 .word-display .letter {
     width: 28px;
     font-size: 2rem;
@@ -54,22 +62,32 @@ body {
     text-transform: uppercase;
     border-bottom: 3px solid #000;
 }
+
+/* styler de bokstavene som er gjettet */
 .word-display .letter.guessed {
     margin: -40px 0 35px;
     border-color: transparent;
 }
+
+/* styler overskriftene i spillboksen */
 .game-box h4 {
     text-align: center;
     font-size: 1.1rem;
     font-weight: 500;
     margin-bottom: 15px;
 }
+
+/* styler de fete bokstavene */
 .game-box h4 b {
     font-weight: 600;
 }
+
+/* Styler de fetede delene av teksten som viser antall feilgjettede bokstaver */
 .game-box .guesses-text b {
     color: #3e0460;
 }
+
+/* Styler tastaturet */
 .game-box .keyboard {
     display: flex;
     gap: 5px;
@@ -77,6 +95,8 @@ body {
     margin-top: 40px;
     justify-content: center;
 }
+
+/* styler knappene i spillmodalen og tastaturet */
 :where(.game-modal, .keyboard) button {
     color: #fff;
     border: none;
@@ -88,17 +108,22 @@ body {
     text-transform: uppercase;
     background: #5E63BA;
 }
+/* Styler knappene  */
 .keyboard button {
     padding: 7px;
     width: calc(100% / 9 - 5px);
 }
+/* Styler de deaktiverte knappene */
 .keyboard button[disabled] {
     pointer-events: none;
     opacity: 0.6;
 }
+/* styler knappene når man sveiper over dem */
 :where(.game-modal, .keyboard) button:hover {
     background: #4e0460;
 }
+
+/* styler den boksen som popper opp når du vinner eller taper. De neste styler mindre deler av den boksen.  */
 .game-modal {
     position: fixed;
     top: 0;
@@ -111,10 +136,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
+/*     bestemmer stabelrekkefølgen til et element. 
+    Det betyr at elementet vil være plassert øverst i stabelen, 
+    noe som gjør det til det fremste elementet på siden, 
+    uavhengig av dets plassering i HTML-koden. 
+    Dette er nyttig når du vil plassere et element foran andre elementer, 
+    for eksempel for å lage et modalt vindu eller en fast overskrift som alltid skal vises øverst på siden. */
     z-index: 9999;
     padding: 0 10px;
     transition: opacity 0.4s ease;
 }
+
+
 .game-modal.show {
     opacity: 1;
     pointer-events: auto;
@@ -152,7 +186,9 @@ body {
     padding: 12px 23px;
 }
 
+/* Dette starter en media query som aktiveres når skjermstørrelsen er 782 piksler eller mindre. */
 @media (max-width: 782px) {
+    /* Dette endrer retningen for flex-containeren .container til å være en kolonne i stedet for en rad, og justerer padding og justerer elementene til midten av skjermen */
     .container {
         flex-direction: column;
         padding: 30px 15px;
@@ -187,7 +223,7 @@ body {
         padding: 10px 18px;
     }
 }
-
+/* styler footer */
 .site-footer {
     width: 100%;
     padding: 20px 10px;
@@ -200,32 +236,32 @@ body {
     bottom: 0;
     left: 0;
 }
- 
+ /* styler avsnitt og lenker innen footeren */
 .footer-content p, .footer-content a {
     color: #3e0460;
     font-size: 0.95rem;
     font-weight: 500;
 }
- 
+/* styler lenker inni footer */
 .footer-content a {
     text-decoration: none;
     color: #5E63BA;
 }
- 
+/* Dette er en regel som angir stilen for lenker når musen sveiper over dem. */
 .footer-content a:hover {
     color: #8286c9;
 }
- 
+ /* styler den usorterte (ul) listen med kilder */
 .sources ul {
     list-style: none;
     padding: 0;
 }
- 
+/* styler hvert listeelement (li) under kildene. */
 .sources li {
     display: inline;
     margin-right: 10px;
 }
- 
+/* Dette er en media query som aktiveres når skjermstørrelsen er 782 piksler eller mindre. Det endrer visse stiler for mindre skjermer. */
 @media (max-width: 782px) {
     .footer-content {
         font-size: 0.9rem;
@@ -237,24 +273,24 @@ body {
         margin-top: 5px;
     }
 }
-
+/* styler overskriften på nettsiden */
 .site-header {
     width: 100%;
     padding: 20px 10px;
     padding-top: 50px;
-    background: #4e0460; /* Matching the overall theme */
+    background: #4e0460; 
     color: #fff;
-    text-align: center; /* Center the title for all screen sizes */
+    text-align: center; 
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     position: absolute;
     top: 0;
     left: 0;
 }
- 
+/*  Styler h1 overskriften */
 .site-header h1 {
     margin: 0;
     font-size: 2.5rem;
     font-weight: 700;
-    color: #fff; /* White color for the text */
-    text-transform: uppercase; /* Styling to match your Hangman title in the game area */
+    color: #fff; 
+    text-transform: uppercase; 
 }
