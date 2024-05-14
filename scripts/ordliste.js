@@ -1,4 +1,4 @@
-const ordListe = [
+const ordListe_local = [
     {
         word: "sjokolade",
         hint: "En deilig søtsak laget av kakaobønner"
