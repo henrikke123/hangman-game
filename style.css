@@ -136,13 +136,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
-/*     bestemmer stabelrekkefølgen til et element. 
-    Det betyr at elementet vil være plassert øverst i stabelen, 
-    noe som gjør det til det fremste elementet på siden, 
-    uavhengig av dets plassering i HTML-koden. 
-    Dette er nyttig når du vil plassere et element foran andre elementer, 
-    for eksempel for å lage et modalt vindu eller en fast overskrift som alltid skal vises øverst på siden. */
     z-index: 9999;
     padding: 0 10px;
     transition: opacity 0.4s ease;
